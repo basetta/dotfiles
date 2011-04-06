@@ -1,0 +1,12 @@
+Host e3* caparezza*
+User emarsys
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile /Users/basetta/.ssh/id_rsa
+
+Host github-basetta
+  HostName github.com
+  User git
+  IdentityFile /Users/basetta/.ssh/id_rsaBasetta
