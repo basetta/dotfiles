@@ -5,9 +5,11 @@ that is solid base to start my own dotfiles repository
 
 ## Installation
 
-git clone git://github.com/ryanb/dotfiles ~/.dotfiles
+```
+git clone git://github.com/basetta/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 rake install
+```
 
 ## Environment
 
