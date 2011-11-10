@@ -11,12 +11,8 @@ def createSymlink( linkables, originFunc, targetFunc )
     backup = false
 
     file = originFunc.call( linkable )
-
-    puts "file====>" + file 
-    #target = targetFunc.call( destDir, file )
+ 
     target = targetFunc.call( linkable, file )
-
-    puts "target=====>" + target
 
     unless File::directory?( linkable )
       if File.exists?(target) || File.symlink?(target)
@@ -65,6 +61,7 @@ task :install do
   end
 end
 
+desc "Hook our configuration files"
 task :configuration do
 
   installables = Dir.glob('*/dest.nfo')
