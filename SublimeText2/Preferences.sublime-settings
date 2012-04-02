@@ -1,0 +1,21 @@
+{
+	"color_scheme": "Packages/User/Monokai Soda.tmTheme",
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"target",
+		"lib_managed"
+	],
+	"font_size": 14.0,
+	"rulers":
+	[
+		100
+	],
+	"tab_size": 4,
+	"theme": "Soda Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}
