@@ -2,7 +2,7 @@ require 'rake'
 
 @skip_all = false
 @overwrite_all = false
-@backup_all = false  
+@backup_all = false
 
 
 def createSymlink( linkables, originFunc, targetFunc )
@@ -11,7 +11,7 @@ def createSymlink( linkables, originFunc, targetFunc )
     backup = false
 
     file = originFunc.call( linkable )
- 
+
     target = targetFunc.call( linkable, file )
 
     unless File::directory?( linkable )
@@ -41,19 +41,19 @@ task :install do
 
   @skip_all = false
   @overwrite_all = false
-  @backup_all = false 
+  @backup_all = false
 
   linkables.each do |linkable|
 
     #generate filename
-    fileFunc = Proc.new do | linkable | 
-      
-      linkable.split('/').last.split('.').first 
+    fileFunc = Proc.new do | linkable |
+
+      linkable.split('/').last.split('.').first
     end
 
     #generate target name
     targetFunc = Proc.new do | linkable, file |
-      "#{ENV["HOME"]}/.#{file}"  
+      "#{ENV["HOME"]}/.#{file}"
     end
 
     createSymlink( linkables, fileFunc, targetFunc )
@@ -64,39 +64,41 @@ end
 desc "Hook our configuration files"
 task :configuration do
 
+  puts "#{ENV["HOME"]}"
+
   installables = Dir.glob('*/dest.nfo')
 
   @skip_all = false
   @overwrite_all = false
-  @backup_all = false 
+  @backup_all = false
 
   installables.each do |installable|
-  
-    destDir = IO.readlines(installable).first.strip
+
+    destDir = "#{ENV["HOME"]}/" + IO.readlines(installable).first.strip
 
     filename = File.basename( installable )
 
     basedir = installable.split( filename ).first
- 
+
     linkables = Dir.glob( basedir + '**/*')
 
     linkables.delete( basedir + 'dest.nfo' )
-    
+
     #generate filename
-    fileFunc = Proc.new do | linkable | 
-      linkable.split( basedir ).last 
+    fileFunc = Proc.new do | linkable |
+      linkable.split( basedir ).last
     end
 
     #generate target name
     targetFunc = Proc.new do | linkable, file |
-      File.join(destDir, file)  
+      File.join(destDir, file)
     end
 
     createSymlink( linkables, fileFunc, targetFunc )
- 
+
   end
 
 
-end  
+end
 
 task :default => 'install'
