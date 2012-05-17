@@ -14,7 +14,7 @@ def createSymlink( linkables, originFunc, targetFunc )
 
     target = targetFunc.call( linkable, file )
 
-    unless File::directory?( linkable )
+
       if File.exists?(target) || File.symlink?(target)
         unless @skip_all || @overwrite_all || @backup_all
           puts "File already exists: #{target}, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all"
@@ -29,8 +29,8 @@ def createSymlink( linkables, originFunc, targetFunc )
         FileUtils.rm_rf(target) if overwrite || @overwrite_all
         `mv "#{target}" "#{target}.backup"` if backup || @backup_all
       end
-      `ln -s "$PWD/#{linkable}" "#{target}"`
-    end
+      `ln -sfn "$PWD/#{linkable}" "#{target}"`
+
   end
 end
 
@@ -79,10 +79,28 @@ task :configuration do
     filename = File.basename( installable )
 
     basedir = installable.split( filename ).first
+    c = Dir.glob( basedir + '*/*.link' )
+    linkables = []
 
-    linkables = Dir.glob( basedir + '**/*')
+    Dir.entries(basedir)
 
-    linkables.delete( basedir + 'dest.nfo' )
+    temp_linkables = Dir.entries( basedir )
+    temp_linkables.delete( 'dest.nfo' )
+    temp_linkables.delete( '.' )
+    temp_linkables.delete( '..')
+
+    temp_linkables.each do |entry|
+      fentry = File.join(basedir, entry)
+      if File::directory?( fentry )
+        if entry[".link"] != nil then
+          linkables << fentry
+        else
+          linkables << Dir.glob( fentry + '/*/**')
+        end
+      else
+        linkables << fentry
+      end
+    end
 
     #generate filename
     fileFunc = Proc.new do | linkable |
@@ -91,6 +109,9 @@ task :configuration do
 
     #generate target name
     targetFunc = Proc.new do | linkable, file |
+      if file[".link"] != nil then
+        file = file[0..-6]
+      end
       File.join(destDir, file)
     end
 
