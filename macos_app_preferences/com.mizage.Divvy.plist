@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>defaultColumnCount</key>
+	<integer>10</integer>
+	<key>defaultRowCount</key>
+	<integer>10</integer>
+	<key>defaultScreenMarginBottom</key>
+	<integer>10</integer>
+	<key>defaultScreenMarginLeft</key>
+	<integer>5</integer>
+	<key>defaultScreenMarginRight</key>
+	<integer>5</integer>
+	<key>defaultScreenMarginTop</key>
+	<integer>5</integer>
+	<key>defaultWindowMarginHeight</key>
+	<integer>10</integer>
+	<key>defaultWindowMarginWidth</key>
+	<integer>10</integer>
+	<key>enableAcceleration</key>
+	<true/>
+	<key>enableMargins</key>
+	<true/>
+	<key>globalHotkey</key>
+	<dict>
+		<key>keyCode</key>
+		<integer>2</integer>
+		<key>modifiers</key>
+		<integer>768</integer>
+	</dict>
+	<key>lastColumnCount</key>
+	<integer>10</integer>
+	<key>lastRowCount</key>
+	<integer>10</integer>
+	<key>shortcuts</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUIa2xUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLR
+	BgdUcm9vdIABrxAQCQoVLzA2QEFKS1VWXV5mZ1UkbnVsbNILDA0UWk5TLm9iamVjdHNW
+	JGNsYXNzpg4PEBESE4ACgAWAB4AJgAuADYAP3RYXGBkaGxwdHh8gIQwiIyQlJicoKSop
+	LC0uXxASc2VsZWN0aW9uRW5kQ29sdW1uXxARc2VsZWN0aW9uU3RhcnRSb3dda2V5Q29t
+	Ym9GbGFnc1xrZXlDb21ib0NvZGVfEBRzZWxlY3Rpb25TdGFydENvbHVtbldlbmFibGVk
+	W3NpemVDb2x1bW5zWnN1YmRpdmlkZWRXbmFtZUtleVZnbG9iYWxfEA9zZWxlY3Rpb25F
+	bmRSb3dYc2l6ZVJvd3MQBxABEgCIAAAQfRACCRAKCIADCBAEEAaABFZDZW50ZXLSMTIz
+	NFgkY2xhc3Nlc1okY2xhc3NuYW1lojQ1WFNob3J0Y3V0WE5TT2JqZWN03RYXGBkaGxwd
+	Hh8gIQw3ODk6LScoKT0pNyguEAkQABIAmAAAEHwJCIAGCIAEVENoYXTdFhcYGRobHB0e
+	HyAhDDcjQkMjJygnRilIKC4SAIwAABB7CQmACAgQEoAEXVRlcm1pbmFsIExlZnTdFhcY
+	GRobHB0eHyAhDEwjTU4oJygnUSlTKC4QEhIAjAAAEHwJCYAKCBASgAReVGVybWluYWwg
+	UmlnaHTdFhcYGRobHB0eHyAhDC04OFc4JygnWik3KC4QEgkJgAwIgARTNHVs3RYXGBka
+	GxwdHh8gIQwtKDhfOCcoJ2IpZCguEBMJCYAOCBATgARTNGJs0jEyaGmjaWo1Xk5TTXV0
+	YWJsZUFycmF5V05TQXJyYXkSAAGGoF8QD05TS2V5ZWRBcmNoaXZlcgAIABEAFgAfACgA
+	MgA1ADoAPABPAFUAWgBlAGwAcwB1AHcAeQB7AH0AfwCBAJwAsQDFANMA4AD3AP8BCwEW
+	AR4BJQE3AUABQgFEAUkBSwFNAU4BUAFRAVMBVAFWAVgBWgFhAWYBbwF6AX0BhgGPAaoB
+	rAGuAbMBtQG2AbcBuQG6AbwBwQHcAeEB4wHkAeUB5wHoAeoB7AH6AhUCFwIcAh4CHwIg
+	AiICIwIlAicCNgJRAlMCVAJVAlcCWAJaAl4CeQJ7AnwCfQJ/AoACggKEAogCjQKRAqAC
+	qAKtAAAAAAAAAgEAAAAAAAAAbQAAAAAAAAAAAAAAAAAAAr8=
+	</data>
+	<key>useGlobalHotkey</key>
+	<true/>
+</dict>
+</plist>
