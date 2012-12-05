@@ -1,0 +1,38 @@
+[user]
+	name = Patrick Martini
+	email = patrick.martini@emarsys.com
+[core]
+	excludesfile = /Users/emarsys/.gitignore_global
+	whitespace = trailing-space,space-before-tab
+	autocrlf = false
+	quotepath = false
+	ignorecase = false
+[diff]
+	mnemonicprefix = true
+	renames = copies
+	external = /Users/emarsys/bin/opendiff-git.sh
+	tool = Kaleidoscope
+[push]
+	default = current
+[color]
+	ui = auto
+[alias]
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    st = status -sb
+[receive]
+	denyNonFastForwards = true
+[rerere]
+	enabled = 1
+	autoupdate = true
+[merge]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+[mergetool]
+	prompt = false
