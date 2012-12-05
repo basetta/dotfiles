@@ -28,3 +28,4 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 RUBY_PATH="/usr/local/Cellar/ruby/1.9.2-p180/bin"
 export PATH=$RUBY_PATH:$PATH
+source ~/.profile
