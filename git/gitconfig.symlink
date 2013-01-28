@@ -1,8 +1,7 @@
-[user]
-	name = Patrick Martini
-	email = patrick.martini@emarsys.com
+[include]
+    path = ~/.gitconfig_user 
 [core]
-	excludesfile = /Users/emarsys/.gitignore_global
+	excludesfile = ~/.gitignore
 	whitespace = trailing-space,space-before-tab
 	autocrlf = false
 	quotepath = false
@@ -38,5 +37,6 @@
 	prompt = false
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 [mergetool]
 	prompt = false
