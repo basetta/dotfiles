@@ -6,11 +6,6 @@
 	autocrlf = false
 	quotepath = false
 	ignorecase = false
-[diff]
-	mnemonicprefix = true
-	renames = copies
-	external = /Users/emarsys/bin/opendiff-git.sh
-	tool = Kaleidoscope
 [push]
 	default = current
 [color]
@@ -29,10 +24,10 @@
 [rerere]
 	enabled = 1
 	autoupdate = true
-[merge]
-	tool = Kaleidoscope
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
 [difftool]
 	prompt = false
 [mergetool "Kaleidoscope"]
@@ -40,3 +35,5 @@
 	trustExitCode = true
 [mergetool]
 	prompt = false
+[merge]
+	tool = Kaleidoscope
