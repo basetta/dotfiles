@@ -31,7 +31,15 @@ set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
+
+" Powerline settings
+set encoding=utf-8 " Necessary to show Unicode glyphs
+let g:Powerline_symbols = 'fancy'
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+" For powerline font in MacVim
+set guifont=Menlo\ For\ Powerline
 
 " ----------------------------------------------------------------------------
 " Visual Cues
