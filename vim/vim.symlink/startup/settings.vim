@@ -8,7 +8,7 @@ set autoindent             " automatic indent new lines
 set smartindent            " be smart about it
 set nowrap                 " do not wrap lines
 set softtabstop=4         
-set shiftwidth=2           " ..
+set shiftwidth=4           " ..
 set tabstop=4
 set expandtab              " expand tabs to spaces
 set nosmarttab             " fuck tabs

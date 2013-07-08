@@ -6,6 +6,7 @@
 	autocrlf = false
 	quotepath = false
 	ignorecase = false
+	editor = /usr/bin/vim
 [push]
 	default = current
 [color]

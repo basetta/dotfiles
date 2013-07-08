@@ -15,4 +15,5 @@ Bundle 'gmarik/vundle'
 " UI Additions
 Bundle 'Lokaltog/powerline'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'othree/html5.vim'
 
