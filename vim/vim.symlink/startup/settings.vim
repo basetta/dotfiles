@@ -53,4 +53,8 @@ set ignorecase             " ignore case when searching
 set nohlsearch             " don't highlight searches
 set visualbell             " shut the fuck up
 
+" ----------------------------------------------------------------------------
+" CtrlP
+" ----------------------------------------------------------------------------
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/target/**,*.jar,*/lib_managed/**

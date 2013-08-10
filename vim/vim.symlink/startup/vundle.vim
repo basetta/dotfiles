@@ -16,4 +16,5 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/powerline'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'othree/html5.vim'
+Bundle 'kien/ctrlp.vim'
 
