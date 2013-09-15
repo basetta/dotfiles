@@ -23,6 +23,7 @@ set ruler                  " show the cursor position all the time
 set noshowcmd              " don't display incomplete commands
 set nolazyredraw           " turn off lazy redraw
 set number                 " line numbers
+set relativenumber         " set relative line number
 set wildmenu               " turn on wild menu for command line completition
 set wildmode=list:longest,full
 set ch=2                   " command line height
@@ -57,4 +58,8 @@ set visualbell             " shut the fuck up
 " CtrlP
 " ----------------------------------------------------------------------------
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/target/**,*.jar,*/lib_managed/**
+"set wildignore+=/tmp/*,*.so,*.swp,*.zip,*.jar
+"set wildignore+=/target/*
+"set wildignore=*.o,*.obj,*.bak,*.exe,*.jar
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"set wildignore=*.o,*~,*.jar
