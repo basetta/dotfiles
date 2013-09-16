@@ -22,7 +22,7 @@ syntax on
 set ruler                  " show the cursor position all the time
 set noshowcmd              " don't display incomplete commands
 set nolazyredraw           " turn off lazy redraw
-set number                 " line numbers
+"set number                 " line numbers
 set relativenumber         " set relative line number
 set wildmenu               " turn on wild menu for command line completition
 set wildmode=list:longest,full
@@ -35,11 +35,11 @@ set nostartofline          " don't jump to the start of line when scrolling
 
 " Powerline settings
 set encoding=utf-8 " Necessary to show Unicode glyphs
-let g:Powerline_symbols = 'fancy'
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+let g:airline_powerline_fonts = 1
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 " For powerline font in MacVim
+set ambiwidth=double
 set guifont=Menlo\ For\ Powerline
 
 " ----------------------------------------------------------------------------
@@ -55,11 +55,22 @@ set nohlsearch             " don't highlight searches
 set visualbell             " shut the fuck up
 
 " ----------------------------------------------------------------------------
-" CtrlP
+" Unite 
 " ----------------------------------------------------------------------------
 
-"set wildignore+=/tmp/*,*.so,*.swp,*.zip,*.jar
-"set wildignore+=/target/*
+nnoremap <C-p> :Unite file_rec<cr>
+set wildignore+=/tmp/*,*.so,*.swp,*.zip,*.jar
+set wildignore+=/target/*
 "set wildignore=*.o,*.obj,*.bak,*.exe,*.jar
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "set wildignore=*.o,*~,*.jar
+"set up some custom ignores
+call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
+      \ 'ignore_pattern', join([
+      \ '\.git/', '\.jar',
+      \ 'git5/.*/review/',
+      \ 'google/obj/',
+      \ 'tmp/',
+      \ 'target/',
+      \ '.sass-cache',
+      \ ], '\|'))

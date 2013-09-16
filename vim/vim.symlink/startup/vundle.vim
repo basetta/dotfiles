@@ -13,8 +13,8 @@ Bundle 'gmarik/vundle'
 
 
 " UI Additions
-Bundle 'Lokaltog/powerline'
+Bundle 'bling/vim-airline'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'othree/html5.vim'
-Bundle 'kien/ctrlp.vim'
-
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Shougo/unite.vim'
