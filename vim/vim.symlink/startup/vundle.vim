@@ -13,7 +13,7 @@ Bundle 'gmarik/vundle'
 
 
 " UI Additions
-Bundle 'bling/vim-airline'
+Bundle 'maciakl/vim-neatstatus'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'othree/html5.vim'
 Bundle 'Shougo/vimproc.vim'
