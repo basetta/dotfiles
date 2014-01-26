@@ -15,6 +15,7 @@ set nosmarttab             " fuck tabs
 set formatoptions+=n       " support for numbered/bullet lists
 set virtualedit=block      " allow virtual edit in visual block ..
 syntax on
+au BufNewFile,BufRead *.gradle setf groovy " activate syntax for gradle files
 " ----------------------------------------------------------------------------
 "  UI
 " ----------------------------------------------------------------------------
@@ -55,22 +56,8 @@ set nohlsearch             " don't highlight searches
 set visualbell             " shut the fuck up
 
 " ----------------------------------------------------------------------------
-" Unite 
+" CtrlP 
 " ----------------------------------------------------------------------------
 
-nnoremap <C-p> :Unite file_rec<cr>
 set wildignore+=/tmp/*,*.so,*.swp,*.zip,*.jar
 set wildignore+=/target/*
-"set wildignore=*.o,*.obj,*.bak,*.exe,*.jar
-"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-"set wildignore=*.o,*~,*.jar
-"set up some custom ignores
-call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
-      \ 'ignore_pattern', join([
-      \ '\.git/', '\.jar',
-      \ 'git5/.*/review/',
-      \ 'google/obj/',
-      \ 'tmp/',
-      \ 'target/',
-      \ '.sass-cache',
-      \ ], '\|'))
