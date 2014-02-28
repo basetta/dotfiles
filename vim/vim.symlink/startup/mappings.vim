@@ -3,7 +3,7 @@
 " ----------------------------------------------------------------------------
 
 " lead with ,
-let mapleader = ","
+let mapleader = " "
 
 " exit to normal mode with 'jj'
 inoremap jj <ESC>

@@ -16,6 +16,9 @@ set formatoptions+=n       " support for numbered/bullet lists
 set virtualedit=block      " allow virtual edit in visual block ..
 syntax on
 au BufNewFile,BufRead *.gradle setf groovy " activate syntax for gradle files
+"removing trailing spaces
+autocmd FileType scala,cpp,java autocmd BufWritePre <buffer> :%s/\s\+$//e
+
 " ----------------------------------------------------------------------------
 "  UI
 " ----------------------------------------------------------------------------
@@ -33,6 +36,9 @@ set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
+"cursorline
+"autocmd InsertEnter * highlight CursorLine guifg=white guibg=blue ctermfg=white ctermbg=blue
+"autocmd InsertLeave * highlight CursorLine guifg=white guibg=darkblue ctermfg=white ctermbg=darkblue
 
 " Powerline settings
 set encoding=utf-8 " Necessary to show Unicode glyphs
@@ -58,6 +64,10 @@ set visualbell             " shut the fuck up
 " ----------------------------------------------------------------------------
 " CtrlP 
 " ----------------------------------------------------------------------------
-
-set wildignore+=/tmp/*,*.so,*.swp,*.zip,*.jar
-set wildignore+=/target/*
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>m :CtrlPMRUFiles<CR>
+nnoremap <leader>t :CtrlPTag<CR>
+let g:ctrlp_max_files = 0
+let g:ctrlp_max_depth = 100
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar,*.git/,build
