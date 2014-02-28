@@ -10,9 +10,6 @@ source ~/.vim/startup/vundle.vim
 " Automatically detect file types. (must turn on after Vundle)
 filetype plugin indent on
 
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar
-"set wildignore+=*/target/*
-source ~/.vim/startup/settings.vim
 source ~/.vim/startup/mappings.vim
-set wildignore=*.o,*~,*.jar
+source ~/.vim/startup/settings.vim
 
