@@ -36,9 +36,43 @@ set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
+"lokai theme
+"let g:molokai_original=1
+"colorscheme molokai
+" override some highlight settings (turn off stupid italics in Molokai)
+highlight ColorColumn  ctermbg=235 guibg=#2c2d27
+highlight CursorLine   ctermbg=238 guibg=#2c2d27
+highlight CursorColumn ctermbg=135 guibg=#2c2d27
+highlight DiffText     gui=none
+highlight Macro        gui=none
+highlight SpecialKey   gui=none
+highlight Special      gui=none
+highlight StorageClass gui=none
+highlight Tag          gui=none
+"
+" "" Solarized theme
+" " colorscheme solarized
+" " set bg=dark
+"
+" " highlight the 80th column
+" "
+" " In Vim >= 7.3, also highlight columns 120+
+if exists('+colorcolumn')
+" (I picked 120-320 because you have to provide an upper bound and 320
+"   just
+"     "  covers a 1080p GVim window in Ubuntu Mono 11 font.)
+    let &colorcolumn="100,".join(range(100,320),",")
+else
+"         " fallback for Vim < v7.3
+    autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+set cursorline
+hi cursorline guibg=\#333333
 "cursorline
 "autocmd InsertEnter * highlight CursorLine guifg=white guibg=blue ctermfg=white ctermbg=blue
 "autocmd InsertLeave * highlight CursorLine guifg=white guibg=darkblue ctermfg=white ctermbg=darkblue
+
+
 
 " Powerline settings
 set encoding=utf-8 " Necessary to show Unicode glyphs
