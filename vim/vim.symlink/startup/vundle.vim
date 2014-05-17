@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
 
 " UI Additions
 "Bundle 'maciakl/vim-neatstatus'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'itchyny/lightline.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'othree/html5.vim'
