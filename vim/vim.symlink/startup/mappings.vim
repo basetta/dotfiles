@@ -18,17 +18,11 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-" Unmap the arrow keys
-" nnoremap <Down> ddp
-" nnoremap <Up> ddkP
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-vnoremap <Down> <Nop>
-vnoremap <Up> <Nop>
-vnoremap <Left> <Nop>
-vnoremap <Right> <Nop>
-vnoremap <Down> <Nop>
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
 
+" Directory of current file (not pwd)
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
 
