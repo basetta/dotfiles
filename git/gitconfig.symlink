@@ -41,3 +41,6 @@
 	prompt = false
 [merge]
 	tool = Kaleidoscope
+[user]
+	name = Patrick Martini
+	email = patrick.martini@emarsys.com

@@ -18,7 +18,7 @@ set virtualedit=block      " allow virtual edit in visual block ..
 syntax on
 au BufNewFile,BufRead *.gradle setf groovy " activate syntax for gradle files
 "removing trailing spaces
-autocmd FileType scala,cpp,java autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType scala,cpp,java,sh autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " ----------------------------------------------------------------------------
 "  UI
