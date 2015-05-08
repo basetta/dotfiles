@@ -11,15 +11,18 @@ on createOmniFocusTask(eventName)
 	tell application "OmniFocus"
 		tell default document
 			-- Grab the context
-			set purchaseContext to first context whose name is "Emarsys"
+			set purchaseContext to first context whose name is "Energy"
+			tell purchaseContext
+				set purchaseContext to first context whose name is "Easy"
+			end tell
 			
 			-- Create the task inside a project
 			set fld to first folder whose name is "Emarsys"
 			tell fld
-				set proj to first project whose name is "Single Actions"
+				set proj to first project whose name is "[Emarsys]"
 				tell proj
 					-- Create parent task and its subtasks.
-					set parentTask to make new task with properties {name:eventName, sequential:true}
+					set parentTask to make new task with properties {name:eventName, sequential:true, context:purchaseContext}
 					tell parentTask
 						make new task with properties {name:"Print Formular for " & eventName, context:purchaseContext}
 						make new task with properties {name:"Get the Sign for " & eventName, context:purchaseContext}
