@@ -7,9 +7,9 @@ bind C-a send-prefix
 #reducing sending command delay
 set -sg escape-time 1
 
-# Change base index to 1
+# Start windows and panes at 1, not 0
 set -g base-index 1
-#setw -g pane-base-index 1
+set -g pane-base-index 1
 
 # Reload config with prefix-r
 bind r source-file ~/.tmux.conf \; display "Config Reloaded"
