@@ -133,4 +133,4 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 # Resurrect Configuration
 set -g @resurrect-processes 'ssh'
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run '~/.tmux/plugins/tpm/tpm'
+#run '~/.tmux/plugins/tpm/tpm'

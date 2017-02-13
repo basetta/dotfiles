@@ -1,0 +1,3 @@
+[submodule "vim/vim.symlink/pack/my-plugins/start/ansible-vim"]
+	path = vim/vim.symlink/pack/my-plugins/start/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim
