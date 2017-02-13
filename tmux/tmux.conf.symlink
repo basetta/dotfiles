@@ -105,7 +105,12 @@ set -g status-justify centre
 # START:vikeys
 setw -g mode-keys vi
 # END:vikeys
-
+#
+# shortcut for synchronize-panes toggle
+# # START:sync
+bind e set-window-option synchronize-panes
+# # END:sync
+#
 #For avoiding spaces before the prompt
 #set-option -g status-utf8 on
 #set-option -g utf-8 on
