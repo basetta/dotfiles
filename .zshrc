@@ -24,11 +24,8 @@ ZSH_THEME="arrow"
 plugins=(git osx )
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-alias mongodb="mongod --config /usr/local/etc/mongod.conf"
 alias v="open -a VimR"
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PATH=/usr/local/bin:/usr/bin:$HOME/bin:$PATH
 source ~/.profile
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export JAVA_HOME=$(/usr/libexec/java_home)
