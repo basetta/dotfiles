@@ -1,0 +1,23 @@
+{
+    "callback":{
+        "url":"https://ems-preventive-checks-staging.herokuapp.com/checks/loopback/results"
+    },
+    "headers":{
+        "From":"\"Emarsys\" <emarsys@emarsys.net>",
+        "MIME-Version":"1.0",
+        "List-Id":"116500036 <Emarsys>",
+        "X-EMarSys-Identify":"116500036_4_1",
+        "X-EMarSys-Environment":"bert",
+        "X-virtual-MTA":"2",
+        "Return-Path":"<bert@emarsys.com>",
+        "X-Report-Abuse":"Please report abuse here abuse-report@emarsys.com",
+        "X-CSA-Complaints":"whitelist-complaints@eco.de",
+        "List-Unsubscribe":"<http:\/\/localhost:9110\/api\/unsubscribe\/116500036_4_1_gQkYrywTQ3>",
+        "Content-Type":"multipart\/alternative;"
+    },
+    "subject":"Withx",
+    "content":{
+        "html":"Yea, SPAM <img src='pippo.png' alt=\"ciao\" /> <a href='http://google.com'>http://emarsys.com</a> <a href='http://googleazzo.com'>Ciao2</a> <img alt=\"alternative\" src=\"https://www.fitsnews.com/wp-content/uploads/2010/09/igor.jpg\" />",
+        "text":""
+    }
+}

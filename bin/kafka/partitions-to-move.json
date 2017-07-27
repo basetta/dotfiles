@@ -1,0 +1,7 @@
+{"partitions":
+             [{"topic": "mes.bc2.pmta.rawlog",
+               "partition": 0,
+               "replicas": [4,3,1] 
+              }],
+  "version":1
+}
